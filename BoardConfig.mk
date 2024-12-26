@@ -137,8 +137,13 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Workaround for copying error vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := vendor
 
+BOARD_USES_RECOVERY_AS_BOOT := true
+
 # Platform
 TARGET_BOARD_PLATFORM := mt6893
+
+# Hardware
+BOARD_USES_MTK_HARDWARE := true
 
 # Encryption
 PLATFORM_SECURITY_PATCH := 2127-12-31
