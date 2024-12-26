@@ -16,6 +16,10 @@
 
 LOCAL_PATH := device/xiaomi/agate
 
+# API
+PRODUCT_SHIPPING_API_LEVEL := 31
+PRODUCT_TARGET_VNDK_VERSION := 34
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -29,9 +33,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# API
-PRODUCT_SHIPPING_API_LEVEL := 32
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -58,8 +59,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-# MTK Preloader Utils
+# Mtk plpath utils
 PRODUCT_PACKAGES += \
+    mtk_plpath_utils \
     mtk_plpath_utils.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
